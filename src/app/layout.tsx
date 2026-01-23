@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Carlos Crespo | Software Engineer",
   description: "Computer Science graduate specializing in full-stack web development, machine learning, and building production-ready applications.",
-  keywords: ["Software Engineer", "Web Developer", "React", "Python", "Machine Learning"],
+  keywords: ["Software Engineer", "Web Developer", "React", "Python", "Machine Learning", "Full Stack Developer"],
   authors: [{ name: "Carlos Crespo" }],
   openGraph: {
     title: "Carlos Crespo | Software Engineer",
@@ -35,13 +35,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* Add suppressHydrationWarning here */}
-      <body
-        className={`${inter.variable} font-sans antialiased`}
-        suppressHydrationWarning={true}
-      >
+      <head>
+        {/* Inline script to prevent flash of wrong theme */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme');
+                  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  if (theme === 'dark' || (!theme && prefersDark)) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className={`${inter.variable} font-sans antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100`}>
         <Navbar />
-        <main>{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

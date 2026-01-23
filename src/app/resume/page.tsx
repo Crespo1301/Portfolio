@@ -7,15 +7,20 @@ export const metadata: Metadata = {
 
 export default function ResumePage() {
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-28 pb-24 bg-white dark:bg-gray-950">
       <div className="container-custom max-w-4xl">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-center">Resume</h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400 text-center mb-8">
-          Download my resume or view it below.
-        </p>
+        <div className="text-center mb-10">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-white">Resume</h1>
+          <p className="text-xl text-gray-600 dark:text-gray-400">
+            Download my resume or view it below.
+          </p>
+        </div>
         
         <div className="flex justify-center gap-4 mb-12">
           <a href="/Main_Professional.pdf" download className="btn-primary">
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
             Download PDF
           </a>
           
@@ -25,11 +30,14 @@ export default function ResumePage() {
             rel="noopener noreferrer"
             className="btn-secondary"
           >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
             Open in New Tab
           </a>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+        <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 shadow-lg">
           <iframe
             src="/Main_Professional.pdf"
             className="w-full h-[800px]"

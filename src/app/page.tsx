@@ -13,7 +13,7 @@ export default function Home() {
       <About />
       
       {/* Featured Projects Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800/50">
+      <section className="py-24 bg-gray-50 dark:bg-gray-900">
         <div className="container-custom">
           <h2 className="section-heading">Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
