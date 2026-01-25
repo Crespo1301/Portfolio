@@ -1,10 +1,10 @@
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-gray-50 dark:bg-gray-900">
+    <section id="about" className="py-24 section-light">
       <div className="container-custom">
         <h2 className="section-heading">About Me</h2>
         <div className="max-w-3xl mx-auto">
-          <div className="space-y-6 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+          <div className="space-y-6 text-muted text-lg leading-relaxed">
             <p>
               I&apos;m a Computer Science graduate from the University of San Francisco with a focus on 
               artificial intelligence, machine learning, and full-stack web development. I&apos;m passionate 
@@ -23,7 +23,7 @@ export default function About() {
           </div>
           
           {/* Quick stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12 pt-12 border-t border-gray-200 dark:border-gray-800">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-13 pt-12 border-t border-gray-200 dark:border-gray-800">
             {[
               { label: "University", value: "USF" },
               { label: "Degree", value: "CS" },
@@ -31,10 +31,10 @@ export default function About() {
               { label: "Status", value: "Open to Work" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+                <div className="text-2xl font-bold text-heading mb-1">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">
+                <div className="text-sm text-subtle">
                   {stat.label}
                 </div>
               </div>

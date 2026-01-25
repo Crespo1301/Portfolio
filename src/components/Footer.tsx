@@ -6,7 +6,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="py-12 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+    <footer className="py-12 section-light border-t border-gray-200 dark:border-gray-800">
       <div className="container-custom">
         <div className="flex flex-col items-center">
           {/* Social Links */}
@@ -17,7 +17,7 @@ export default function Footer() {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-xl bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary-200 dark:hover:border-primary-800"
+                className="p-3 rounded-xl bg-white dark:bg-gray-800 text-subtle hover:text-primary-600 dark:hover:text-primary-400 hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary-200 dark:hover:border-primary-800"
                 aria-label={link.name}
               >
                 {link.icon === "github" && (
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
           
           {/* Copyright */}
-          <p className="text-gray-500 dark:text-gray-400 text-sm">
+          <p className="text-subtle text-sm">
             © {new Date().getFullYear()} Carlos Crespo. Built with Next.js & Tailwind CSS.
           </p>
         </div>

@@ -1,80 +1,145 @@
+// src/data/projects.ts
+// This is an EXAMPLE showing how to add La Joya Cafe
+// Merge this with your existing projects.ts file
+
 export interface Project {
   slug: string;
   title: string;
   description: string;
   longDescription: string;
-  image: string;
   technologies: string[];
-  liveUrl?: string;
   githubUrl: string;
+  liveUrl?: string;
+  image?: string;
   featured: boolean;
   challenges?: string[];
   learnings?: string[];
 }
 
 export const projects: Project[] = [
+  // ============================================
+  // NEW: La Joya Cafe - Client Work
+  // ============================================
+  {
+    slug: "la-joya-cafe",
+    title: "La Joya Cafe",
+    description: "Complete brand identity and website for a Mexican cafe, including custom logo design, menu creation, and social media management.",
+    longDescription: `Designed and developed a comprehensive digital presence for La Joya Cafe, a Mexican restaurant and bakery. This end-to-end project encompassed multiple disciplines:
+
+• Website Development: Built a responsive, SEO-optimized website using WordPress and Elementor, featuring online ordering integration and location information.
+
+• Brand Identity: Created the cafe's visual identity including logo design, color palette, and typography guidelines that reflect the warmth and authenticity of Mexican cuisine.
+
+• Menu Design: Designed both print and digital menus with appetizing food photography integration and bilingual content.
+
+• Social Media: Established and managed social media presence, creating engaging content that increased local visibility.
+
+• Video Production: Produced and posted YouTube videos showcasing the cafe's atmosphere, food preparation, and customer experiences.
+
+This project demonstrates my ability to handle complete client engagements from concept to delivery.`,
+    technologies: ["WordPress", "Elementor", "Graphic Design", "Logo Design", "Menu Design", "Social Media Marketing", "Video Production", "SEO"],
+    githubUrl: "", // No code repository for WordPress sites
+    liveUrl: "https://la-joya-cafe.com",
+    image: "/images/projects/la-joya-cafe.gif",
+    featured: true,
+    challenges: [
+      "Creating a cohesive brand identity that captures the essence of Mexican culture and cuisine",
+      "Designing menus that work seamlessly in both print and digital formats",
+      "Optimizing the website for local SEO to attract nearby customers",
+      "Producing video content that authentically represents the cafe's atmosphere"
+    ],
+    learnings: [
+      "End-to-end brand development from concept to implementation",
+      "Client communication, requirement gathering, and expectation management",
+      "WordPress and Elementor for rapid, client-friendly website deployment",
+      "The importance of consistent branding across all touchpoints (web, print, social)"
+    ]
+  },
+
+  // ============================================
+  // Your Existing Projects (keep these)
+  // ============================================
   {
     slug: "finance-dashboard",
     title: "Personal Finance Dashboard",
     description: "A responsive React-based finance tracker with real-time data visualization, budget management, and multi-currency support.",
-    longDescription: "A comprehensive personal finance application that helps users track income and expenses with interactive charts, set budget goals by category, and export transaction data. Built with React 19, Chart.js, and Tailwind CSS v4.",
-    image: "/images/projects/finance.gif",
-    technologies: ["React", "Tailwind CSS", "Chart.js", "Vite", "LocalStorage"],
-    liveUrl: "https://finance-dashboard-seven-gamma.vercel.app/",
+    longDescription: "A comprehensive personal finance dashboard built with React, featuring interactive charts powered by Chart.js, budget tracking, expense categorization, and multi-currency support. The application uses local storage for data persistence and provides insights into spending patterns.",
+    technologies: ["React", "Tailwind CSS", "Chart.js", "Vite", "JavaScript"],
     githubUrl: "https://github.com/Crespo1301/finance-dashboard",
+    liveUrl: "https://finance-dashboard-seven-gamma.vercel.app/",
+    image: "/images/projects/finance.gif",
     featured: true,
     challenges: [
-      "Implementing real-time budget tracking with progress indicators",
-      "Managing complex state across multiple components",
-      "Creating responsive charts that work on mobile devices"
+      "Implementing real-time chart updates without performance degradation",
+      "Designing an intuitive UI for complex financial data",
+      "Handling multi-currency conversions accurately"
     ],
     learnings: [
-      "Deep understanding of React state management patterns",
-      "Chart.js customization and responsive design",
-      "Tailwind CSS v4 architecture and best practices"
-    ]
-  },
-  {
-    slug: "pomodoro-timer",
-    title: "CLI Pomodoro Timer",
-    description: "A command-line Pomodoro productivity timer with session tracking and JSON persistence.",
-    longDescription: "A Python-based CLI application that implements the Pomodoro Technique with customizable work/break intervals, session history tracking, and data persistence using JSON files.",
-    image: "/images/projects/pomodoro-timer.gif",
-    technologies: ["Python", "JSON", "CLI"],
-    githubUrl: "https://github.com/Crespo1301/pomodoro-timer",
-    featured: true,
-    challenges: [
-      "Handling keyboard interrupts gracefully",
-      "Implementing persistent session storage",
-      "Creating a user-friendly CLI interface"
-    ],
-    learnings: [
-      "Python file I/O and JSON handling",
-      "CLI application design patterns",
-      "Time management and threading concepts"
+      "Advanced Chart.js customization and optimization",
+      "State management patterns for financial applications",
+      "Responsive design for data-heavy dashboards"
     ]
   },
   {
     slug: "ai-analyzer",
     title: "AI Model Performance Analyzer",
     description: "Multi-model evaluation platform comparing AI betting predictions using a dynamic scoring system.",
-    longDescription: "Built a comprehensive platform to compare NFL betting predictions across multiple AI models using advanced metrics like DVOA, EPA, and success rate. Features real-time comparison, filtering, and score adjustments through an interactive web interface.",
-    image: "/images/projects/AI-Analyzer.gif",
+    longDescription: "A sophisticated platform for evaluating and comparing multiple AI models' prediction accuracy. Features include dynamic scoring algorithms, performance visualization, and detailed analytics for model comparison.",
     technologies: ["Python", "Machine Learning", "Data Analysis", "Web Interface"],
     githubUrl: "https://github.com/Crespo1301/AI_Analyzer_Crespo",
+    image: "/images/projects/AI-Analyzer.gif",
     featured: true,
     challenges: [
-      "Designing a fair multi-model comparison system",
-      "Integrating multiple data sources for NFL metrics",
-      "Building an intuitive interface for complex data"
+      "Designing fair comparison metrics across different model types",
+      "Handling large datasets efficiently",
+      "Creating meaningful visualizations for complex data"
     ],
     learnings: [
       "Machine learning model evaluation techniques",
-      "Sports analytics and advanced NFL metrics",
-      "Data visualization for complex datasets"
+      "Data pipeline optimization",
+      "Statistical analysis for model comparison"
     ]
-  }
+  },
+  {
+    slug: "pomodoro-timer",
+    title: "CLI Pomodoro Timer",
+    description: "A command-line Pomodoro productivity timer with session tracking and JSON persistence.",
+    longDescription: "A Python-based command-line Pomodoro timer that helps users maintain focus using the Pomodoro Technique. Features include customizable work/break intervals, session tracking with JSON persistence, and audio notifications.",
+    technologies: ["Python", "JSON", "CLI"],
+    githubUrl: "https://github.com/Crespo1301/pomodoro-timer",
+    image: "/images/projects/pomodoro-timer.gif",
+    featured: true,
+    challenges: [
+      "Creating an intuitive CLI user experience",
+      "Implementing reliable timer functionality",
+      "Persisting session data across runs"
+    ],
+    learnings: [
+      "Python CLI application architecture",
+      "JSON file handling for data persistence",
+      "Cross-platform compatibility considerations"
+    ]
+  },
+
+  // ============================================
+  // Add more projects below as you build them!
+  // ============================================
 ];
 
-export const getFeaturedProjects = () => projects.filter(p => p.featured);
-export const getProjectBySlug = (slug: string) => projects.find(p => p.slug === slug);
+// Helper functions
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find((project) => project.slug === slug);
+}
+
+export function getFeaturedProjects(): Project[] {
+  return projects.filter((project) => project.featured);
+}
+
+// Optional: Get projects by category (if you add categories later)
+export function getProjectsByCategory(category: string): Project[] {
+  return projects.filter((project) => 
+    project.technologies.some(tech => 
+      tech.toLowerCase().includes(category.toLowerCase())
+    )
+  );
+}

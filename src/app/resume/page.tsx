@@ -7,11 +7,11 @@ export const metadata: Metadata = {
 
 export default function ResumePage() {
   return (
-    <div className="pt-28 pb-24 bg-white dark:bg-gray-950">
+    <div className="pt-28 pb-24 section-default">
       <div className="container-custom max-w-4xl">
         <div className="text-center mb-10">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-white">Resume</h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-heading">Resume</h1>
+          <p className="text-xl text-muted">
             Download my resume or view it below.
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function ResumePage() {
           </a>
         </div>
 
-        <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 shadow-lg">
+        <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 section-light shadow-lg">
           <iframe
             src="/Main_Professional.pdf"
             className="w-full h-[800px]"

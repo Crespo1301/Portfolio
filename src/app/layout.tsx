@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Carlos Crespo | Software Engineer",
     description: "Computer Science graduate specializing in full-stack web development and machine learning.",
-    url: "https://carloscrespo.dev",
+    url: "https://carloscrespo.info",
     siteName: "Carlos Crespo Portfolio",
     type: "website",
   },
@@ -36,18 +36,30 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Inline script to prevent flash of wrong theme */}
+        {/* 
+          Inline script to prevent flash of wrong theme.
+          Priority order:
+          1. User's explicit choice (localStorage)
+          2. System preference (prefers-color-scheme)
+          This runs before React hydrates, so no flash occurs.
+        */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
                 try {
-                  var theme = localStorage.getItem('theme');
-                  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  if (theme === 'dark' || (!theme && prefersDark)) {
+                  var storedTheme = localStorage.getItem('theme');
+                  
+                  if (storedTheme === 'dark') {
                     document.documentElement.classList.add('dark');
-                  } else {
+                  } else if (storedTheme === 'light') {
                     document.documentElement.classList.remove('dark');
+                  } else {
+                    // No stored preference - use system preference
+                    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    if (prefersDark) {
+                      document.documentElement.classList.add('dark');
+                    }
                   }
                 } catch (e) {}
               })();
@@ -55,7 +67,17 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} font-sans antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100`}>
+      {/* 
+        Per dark mode guidelines: 
+        - Body colors are set in @layer base in globals.css
+        - data-gramm attributes prevent Grammarly hydration warnings
+      */}
+      <body 
+        className={`${inter.variable} font-sans antialiased`}
+        data-gramm="false"
+        data-gramm_editor="false"
+        data-enable-grammarly="false"
+      >
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />

@@ -24,18 +24,18 @@ export default function Hero() {
             Open to opportunities
           </div>
           
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-gray-900 dark:text-white">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-heading">
             Hi, I&apos;m{" "}
             <span className="bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">
               Carlos Crespo
             </span>
           </h1>
           
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl text-gray-600 dark:text-gray-400 font-medium mb-8">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl text-muted font-medium mb-8">
             Software Engineer
           </h2>
           
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted mb-12 max-w-2xl mx-auto leading-relaxed">
             Computer Science graduate from the University of San Francisco specializing in 
             full-stack web development, machine learning, and building production-ready applications.
           </p>
@@ -62,7 +62,7 @@ export default function Hero() {
 
         {/* Scroll indicator */}
         <div className="mt-12 flex justify-center">
-          <div className="flex flex-col items-center gap-2 text-gray-400">
+          <div className="flex flex-col items-center gap-2 text-gray-400 dark:text-gray-500">
             <span className="text-xs font-medium uppercase tracking-wider">Scroll</span>
             <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />

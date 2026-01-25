@@ -54,11 +54,11 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="pt-28 pb-24 bg-white dark:bg-gray-950">
+    <div className="pt-28 pb-24 section-default">
       <div className="container-custom max-w-4xl">
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-white">Get In Touch</h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-heading">Get In Touch</h1>
+          <p className="text-xl text-muted max-w-2xl mx-auto">
             I&apos;m currently looking for new opportunities. Whether you have a question or just want to say hi, 
             I&apos;ll do my best to get back to you!
           </p>
@@ -71,15 +71,15 @@ export default function ContactPage() {
               href={link.href}
               target={link.name !== "Email" && link.name !== "Phone" ? "_blank" : undefined}
               rel={link.name !== "Email" && link.name !== "Phone" ? "noopener noreferrer" : undefined}
-              className="flex items-start gap-4 p-6 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-primary-300 dark:hover:border-primary-700 transition-all duration-300 group hover:shadow-lg"
+              className="flex items-start gap-4 p-6 section-light rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-primary-300 dark:hover:border-primary-700 transition-all duration-300 group hover:shadow-lg"
             >
               <div className="p-3 rounded-xl bg-white dark:bg-gray-800 text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform shadow-sm">
                 {link.icon}
               </div>
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white text-lg">{link.name}</p>
-                <p className="text-gray-600 dark:text-gray-400">{link.value}</p>
-                <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">{link.description}</p>
+                <p className="font-semibold text-heading text-lg">{link.name}</p>
+                <p className="text-muted">{link.value}</p>
+                <p className="text-sm text-subtle mt-1">{link.description}</p>
               </div>
             </a>
           ))}

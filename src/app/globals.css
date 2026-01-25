@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   TAILWIND V4 DARK MODE - CLASS-BASED CONFIGURATION
+   MUST be immediately after @import to override default media query behavior
+   ========================================================================== */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-family-sans: 'Inter', system-ui, sans-serif;
   
@@ -17,39 +23,59 @@
   --color-primary-950: #082f49;
 }
 
+/* ==========================================================================
+   BASE LAYER - Dark Mode Foundation
+   ========================================================================== */
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   
-  /* CRITICAL: Dark mode background fix */
+  /* Base body styles with dark mode variant */
   body {
-    @apply bg-white text-gray-900 transition-colors duration-300;
-  }
-  
-  /* Dark mode - explicitly target when .dark is on html */
-  .dark body,
-  html.dark body {
-    @apply bg-gray-950 text-gray-100;
-  }
-  
-  /* Fallback: also apply dark styles directly to body when html has dark class */
-  html.dark {
-    background-color: #030712; /* gray-950 */
-    color-scheme: dark;
-  }
-  
-  html.dark body {
-    background-color: #030712; /* gray-950 */
-    color: #f3f4f6; /* gray-100 */
+    @apply bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100;
   }
 }
 
+/* ==========================================================================
+   COMPONENTS LAYER - Semantic Text Classes & Reusable Components
+   ========================================================================== */
+
 @layer components {
+  /* --------------------------------------------------------------------------
+     Semantic Text Classes
+     -------------------------------------------------------------------------- */
+  .text-default {
+    @apply text-gray-900 dark:text-gray-100;
+  }
+
+  .text-muted {
+    @apply text-gray-600 dark:text-gray-400;
+  }
+
+  .text-heading {
+    @apply text-gray-900 dark:text-white;
+  }
+
+  .text-inverted {
+    @apply text-white dark:text-gray-900;
+  }
+
+  .text-subtle {
+    @apply text-gray-500 dark:text-gray-500;
+  }
+
+  /* --------------------------------------------------------------------------
+     Layout Components
+     -------------------------------------------------------------------------- */
   .container-custom {
     @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
+
+  /* --------------------------------------------------------------------------
+     Button Components
+     -------------------------------------------------------------------------- */
   .btn-primary {
     @apply inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg shadow-primary-600/25 hover:shadow-xl hover:shadow-primary-600/30 hover:-translate-y-0.5;
   }
@@ -57,34 +83,51 @@
   .btn-secondary {
     @apply inline-flex items-center justify-center border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold py-3 px-8 rounded-full hover:border-primary-600 hover:text-primary-600 dark:hover:border-primary-400 dark:hover:text-primary-400 transition-all duration-300 hover:-translate-y-0.5;
   }
-  
+
+  /* --------------------------------------------------------------------------
+     Typography Components
+     -------------------------------------------------------------------------- */
   .section-heading {
     @apply text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900 dark:text-white;
   }
-  
-  /* Card styling for consistent look */
+
+  /* --------------------------------------------------------------------------
+     Card Components
+     -------------------------------------------------------------------------- */
   .card {
-    @apply bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 transition-all duration-300;
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 transition-all duration-300;
   }
   
   .card-hover {
     @apply hover:shadow-xl hover:border-gray-200 dark:hover:border-gray-700 hover:-translate-y-1;
   }
+
+  /* --------------------------------------------------------------------------
+     Section Background Variants
+     -------------------------------------------------------------------------- */
+  .section-light {
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+  }
+
+  .section-default {
+    @apply bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100;
+  }
 }
 
-/* Smooth transitions for theme changes */
-* {
+/* ==========================================================================
+   TRANSITION RULES
+   ========================================================================== */
+
+body,
+a,
+button,
+.card {
   @apply transition-colors duration-300;
 }
 
-/* Ensure all dark mode backgrounds are properly applied */
-.dark .bg-gray-50 {
-  background-color: #111827 !important; /* gray-900 */
-}
-
-.dark .bg-white {
-  background-color: #030712 !important; /* gray-950 */
-}
+/* ==========================================================================
+   UTILITY STYLES
+   ========================================================================== */
 
 /* Selection color */
 ::selection {
