@@ -39,8 +39,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="src/app/favicon.ico" type="image/x-icon" />
-
         {/* 
           Inline script to prevent flash of wrong theme.
           Priority order:
