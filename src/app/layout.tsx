@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   description: "Computer Science graduate specializing in full-stack web development, machine learning, and building production-ready applications.",
   keywords: ["Software Engineer", "Web Developer", "React", "Python", "Machine Learning", "Full Stack Developer"],
   authors: [{ name: "Carlos Crespo" }],
+  icons: {
+    icon: "/1.ico",
+  },
   openGraph: {
     title: "Carlos Crespo | Software Engineer",
     description: "Computer Science graduate specializing in full-stack web development and machine learning.",
@@ -36,6 +39,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="src/app/favicon.ico" type="image/x-icon" />
+
         {/* 
           Inline script to prevent flash of wrong theme.
           Priority order:
