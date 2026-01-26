@@ -1,275 +1,162 @@
-# Carlos Crespo - Portfolio
+# Carlos Crespo | Portfolio
 
-A modern, responsive portfolio website built with Next.js 14, TypeScript, and Tailwind CSS v4. Features a fully compliant dark mode implementation with manual toggle override.
+[![Live Site](https://img.shields.io/badge/Live%20Site-carloscrespo.info-blue?style=for-the-badge)](https://carloscrespo.info)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-🌐 **Live Site:** [carloscrespo.info](https://carloscrespo.info)
+My personal portfolio website showcasing software engineering projects, client work, and technical skills. Built with Next.js 14, TypeScript, and Tailwind CSS v4.
+
+---
+
+## Table of Contents
+
+- [About](#about)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Using This Template](#using-this-template)
+- [License](#license)
+- [Contact](#contact)
+
+---
+
+## About
+
+This portfolio serves as a comprehensive showcase of my work as a software engineer, featuring:
+
+- **Software Development Projects** — Full-stack applications, CLI tools, and machine learning projects
+- **Client Work** — Professional freelance projects including web development, branding, and design
+- **Technical Skills** — Programming languages, frameworks, and tools I work with
+
+Visit the live site: [carloscrespo.info](https://carloscrespo.info)
+
+---
 
 ## Features
 
-- ⚡ **Next.js 14** with App Router
-- 🎨 **Tailwind CSS v4** for styling
-- 🌙 **Dark Mode** with manual toggle + system preference detection
-- 📱 **Fully Responsive** design
-- 🎯 **SEO Optimized** with metadata
-- ♿ **Accessible** components
-- 🚀 **Deployed on Vercel**
+| Feature | Description |
+|---------|-------------|
+| Server-Side Rendering | Fast initial page loads with Next.js App Router |
+| Dark Mode | Manual toggle with system preference detection |
+| Responsive Design | Mobile-first approach, optimized for all screen sizes |
+| Modern UI | Clean, professional design with smooth animations |
+| SEO Optimized | Meta tags, Open Graph, and Twitter Card support |
+| Accessible | WCAG compliant with semantic HTML structure |
+| Performance | Optimized images, fonts, and minimal JavaScript bundle |
+
+---
 
 ## Tech Stack
 
-- **Framework:** Next.js 14
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS v4
-- **Font:** Inter (via next/font)
-- **Deployment:** Vercel
+| Category | Technologies |
+|----------|-------------|
+| Framework | Next.js 14 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| Font | Inter (via next/font) |
+| Deployment | Vercel |
 
 ---
 
 ## Project Structure
 
 ```
-src/
-├── app/
-│   ├── globals.css          # Global styles & Tailwind v4 config
-│   ├── layout.tsx           # Root layout
-│   ├── page.tsx             # Home page
-│   ├── projects/
-│   │   ├── page.tsx         # All projects listing
-│   │   └── [slug]/page.tsx  # Dynamic project detail pages
-│   ├── resume/page.tsx
-│   └── contact/page.tsx
-├── components/
-│   ├── About.tsx
-│   ├── Footer.tsx
-│   ├── Hero.tsx
-│   ├── Navbar.tsx
-│   ├── ProjectCard.tsx
-│   ├── Skills.tsx
-│   └── ThemeToggle.tsx
-├── data/
-│   └── projects.ts          # ⭐ ADD YOUR PROJECTS HERE
-└── public/
-    └── images/
-        └── projects/        # Project screenshots/GIFs
+Portfolio/
+├── public/
+│   ├── images/
+│   │   └── projects/           # Project screenshots and GIFs
+│   └── Main_Professional.pdf   # Resume PDF
+│
+├── src/
+│   ├── app/
+│   │   ├── globals.css         # Global styles, Tailwind config
+│   │   ├── layout.tsx          # Root layout component
+│   │   ├── page.tsx            # Homepage
+│   │   ├── projects/
+│   │   │   ├── page.tsx        # Projects listing page
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx    # Dynamic project detail page
+│   │   ├── resume/
+│   │   │   └── page.tsx        # Resume page
+│   │   └── contact/
+│   │       └── page.tsx        # Contact page
+│   │
+│   ├── components/
+│   │   ├── About.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Icons.tsx           # Reusable SVG icon components
+│   │   ├── Navbar.tsx
+│   │   ├── ProjectCard.tsx
+│   │   ├── Skills.tsx
+│   │   └── ThemeToggle.tsx
+│   │
+│   └── data/
+│       └── projects.ts         # Project data and helper functions
+│
+├── next.config.ts
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+└── README.md
 ```
 
 ---
 
-## 🚀 Adding New Projects
+## Using This Template
 
-### Step 1: Add Project Data
+If you would like to use this code as a template for your own portfolio, you are welcome to do so under the MIT License.
 
-Open `src/data/projects.ts` and add a new project object to the `projects` array:
+### Quick Start
 
-```typescript
-{
-  slug: "la-joya-cafe",                    // URL-friendly name (lowercase, hyphens)
-  title: "La Joya Cafe",
-  description: "Full brand identity and website for a local Mexican cafe, including logo design, menu creation, and social media presence.",
-  longDescription: "Designed and developed a complete digital presence for La Joya Cafe, a Mexican restaurant. This included building their website using WordPress and Elementor, creating their visual brand identity with custom logos, designing print and digital menus, managing social media content, and producing YouTube video content to increase their online visibility.",
-  technologies: ["WordPress", "Elementor", "Graphic Design", "Social Media", "Video Production"],
-  githubUrl: "",                           // Leave empty if no code repo
-  liveUrl: "https://la-joya-cafe.com",
-  image: "/images/projects/la-joya-cafe.png",  // Add screenshot to public/images/projects/
-  featured: true,                          // Show on homepage
-  challenges: [
-    "Creating cohesive brand identity from scratch",
-    "Designing menus that work both in print and digital formats",
-    "Optimizing website for local SEO"
-  ],
-  learnings: [
-    "End-to-end brand development process",
-    "Client communication and requirement gathering",
-    "WordPress/Elementor for rapid website deployment"
-  ]
-}
-```
+1. Fork or clone this repository
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000)
 
-### Step 2: Add Project Image
+### Customization
 
-1. Take a screenshot or create a preview image of your project
-2. Save it to `public/images/projects/` (e.g., `la-joya-cafe.png`)
-3. Recommended: Use GIFs for interactive projects, PNGs for static sites
-4. Optimal size: 1200x630px (social media friendly)
+**Update personal information:**
+- `src/app/layout.tsx` — Site metadata and SEO
+- `src/components/Hero.tsx` — Name, title, and introduction
+- `src/components/About.tsx` — Bio and background
+- `src/components/Footer.tsx` — Social links
+- `src/app/contact/page.tsx` — Contact information
 
-### Step 3: Update the Project Type (if needed)
+**Add your projects:**
+- Place images in `public/images/projects/`
+- Add project data to `src/data/projects.ts`
 
-If you add new fields, update the `Project` interface in `src/data/projects.ts`:
+**Modify styling:**
+- Theme colors are defined in `src/app/globals.css` under `@theme`
+- Dark mode uses Tailwind's class-based strategy with `@custom-variant`
 
-```typescript
-export interface Project {
-  slug: string;
-  title: string;
-  description: string;
-  longDescription: string;
-  technologies: string[];
-  githubUrl: string;
-  liveUrl?: string;           // Optional - some projects may not have live demos
-  image?: string;             // Optional - fallback UI shown if missing
-  featured: boolean;
-  challenges?: string[];      // Optional
-  learnings?: string[];       // Optional
-  category?: string;          // Optional - for filtering (e.g., "Web Dev", "Design", "Client Work")
-}
-```
-
----
-
-## 📂 Project Categories (Suggested)
-
-Organize your work into categories:
-
-| Category | Description | Examples |
-|----------|-------------|----------|
-| `Web Development` | Full-stack or frontend projects | Finance Dashboard, Chat App |
-| `Client Work` | Freelance/professional projects | La Joya Cafe |
-| `Tools & CLI` | Command-line applications | Pomodoro Timer |
-| `Machine Learning` | AI/ML projects | AI Model Analyzer |
-| `Design` | Graphic design, branding | Logos, menus |
-
----
-
-## 🔄 Deployment Workflow
-
-### Local Development
+### Build and Deploy
 
 ```bash
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-
-# Build for production (test before deploying)
-npm run build
+npm run build    # Create production build
+npm run start    # Start production server locally
 ```
 
-### Deploying to GitHub + Vercel
-
-#### 1. Stage and Commit Changes
-
-```bash
-# See what files changed
-git status
-
-# Add all changes
-git add .
-
-# Commit with descriptive message
-git commit -m "Add La Joya Cafe project to portfolio"
-```
-
-#### 2. Push to GitHub
-
-```bash
-# Push to main branch
-git push origin main
-```
-
-#### 3. Vercel Auto-Deploys
-
-Once connected, Vercel automatically:
-- Detects the push to `main`
-- Builds your Next.js app
-- Deploys to your custom domain
-
-**Check deployment status:** [vercel.com/dashboard](https://vercel.com/dashboard)
+Deploy to Vercel by connecting your GitHub repository at [vercel.com](https://vercel.com).
 
 ---
 
-## 🛠 Common Tasks
+## License
 
-### Adding a New Skill
-
-Edit `src/components/Skills.tsx`:
-
-```typescript
-const skills = {
-  "Languages": ["Python", "JavaScript", "TypeScript", ...],
-  "Frontend": ["React", "Next.js", ...],
-  // Add new category:
-  "Design": ["Figma", "Adobe Photoshop", "Canva"],
-};
-```
-
-### Updating Contact Info
-
-Edit `src/app/contact/page.tsx` - update the `contactLinks` array.
-
-### Changing Theme Colors
-
-Edit `src/app/globals.css` - modify the `@theme` block:
-
-```css
-@theme {
-  --color-primary-500: #your-color;
-  --color-primary-600: #your-color;
-  /* ... */
-}
-```
+This project is licensed under the MIT License. You are free to use, modify, and distribute this code for personal or commercial purposes. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🌙 Dark Mode Implementation
-
-This project uses Tailwind CSS v4's class-based dark mode:
-
-```css
-@import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
-```
-
-**How it works:**
-1. On load: JavaScript checks `localStorage` for user preference, falls back to system preference
-2. Toggle button: Adds/removes `.dark` class on `<html>` and saves to `localStorage`
-3. All `dark:` utilities respond to the `.dark` class
-
----
-
-## 📝 Semantic CSS Classes
-
-Use these for consistent styling:
-
-| Class | Purpose |
-|-------|---------|
-| `.text-heading` | Headings and titles |
-| `.text-default` | Primary body text |
-| `.text-muted` | Secondary/muted text |
-| `.text-subtle` | Tertiary/subtle text |
-| `.section-default` | White/dark background sections |
-| `.section-light` | Gray background sections |
-| `.btn-primary` | Primary action buttons |
-| `.btn-secondary` | Secondary action buttons |
-| `.card` | Card containers |
-
----
-
-## 🐛 Troubleshooting
-
-### Dark mode not working after changes
-1. Stop dev server (Ctrl+C)
-2. Delete `.next` folder: `rm -rf .next`
-3. Restart: `npm run dev`
-
-### Images not showing
-- Ensure images are in `public/images/projects/`
-- Path should start with `/` (e.g., `/images/projects/my-project.png`)
-
-### Vercel build failing
-- Run `npm run build` locally to see errors
-- Check Vercel dashboard for build logs
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-## 📬 Contact
+## Contact
 
 **Carlos Crespo**
-- 🌐 Website: [carloscrespo.info](https://carloscrespo.info)
-- 📧 Email: Crespo1301@gmail.com
-- 💻 GitHub: [@Crespo1301](https://github.com/Crespo1301)
-- 💼 LinkedIn: [carlos-crespo](https://www.linkedin.com/in/carlos-crespo-46608014a/)
+
+| Platform | Link |
+|----------|------|
+| Website | [carloscrespo.info](https://carloscrespo.info) |
+| Email | [Crespo1301@gmail.com](mailto:Crespo1301@gmail.com) |
+| GitHub | [@Crespo1301](https://github.com/Crespo1301) |
+| LinkedIn | [carlos-crespo](https://www.linkedin.com/in/carlos-crespo-46608014a/) |
