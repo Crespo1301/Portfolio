@@ -17,8 +17,9 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+
   // ============================================
-  // NEW: La Joya Cafe - Client Work
+  // La Joya Cafe - Client Work
   // ============================================
   {
     slug: "la-joya-cafe",
@@ -55,9 +56,8 @@ This project demonstrates my ability to handle complete client engagements from 
       "The importance of consistent branding across all touchpoints (web, print, social)"
     ]
   },
-
   // ============================================
-  // Your Existing Projects (keep these)
+  // Personal Projects
   // ============================================
   {
     slug: "finance-dashboard",
@@ -100,6 +100,31 @@ This project demonstrates my ability to handle complete client engagements from 
       "Statistical analysis for model comparison"
     ]
   },
+
+  // ============================================
+  // Markdown To HTML Converter - CLi Tool
+  // ============================================
+  {
+    slug: "MarkdownToHTML",
+    title: "Markdown To HTML Converter",
+    description: "A tool to convert Markdown files to HTML with customizable styling.",
+    longDescription: `<p>This project is a web-based tool that converts Markdown files into HTML with customizable styling options. It features a clean, intuitive interface and supports various formatting styles.</p>`,
+    technologies: [],
+    githubUrl: "https://github.com/Crespo1301/MarkdownToHTML", 
+    liveUrl: "",
+    image: "/images/projects/MarkdownToHTML.gif",
+    featured: true,
+    challenges: [
+      ""
+    ],
+    learnings: [
+      ""
+    ]
+  },
+
+  // ============================================
+  // Pomodoro Timer - CLi Application
+  // ============================================
   {
     slug: "pomodoro-timer",
     title: "CLI Pomodoro Timer",
