@@ -18,6 +18,40 @@ export interface Project {
 
 export const projects: Project[] = [
 
+// ============================================
+  // cc-pi.com - Client Work
+  // ============================================
+  {
+    slug: "cc-pi-com",
+    title: "CC-PI.com",
+    description: "Professional website for a private investigation firm, featuring service showcases, contact forms, and SEO optimization.",
+    longDescription: `Designed and developed a professional web presence for CC-PI, a private investigation firm. This project focused on establishing credibility and generating client inquiries:
+
+- Website Development: Built a clean, professional website using WordPress and Elementor that conveys trust and confidentiality—essential qualities for a PI firm.
+
+- Service Presentation: Created clear, organized service pages that explain investigation offerings without revealing sensitive methodologies.
+
+- SEO Optimization: Implemented local SEO strategies to improve visibility for potential clients searching for investigation services in the area.
+
+- Analytics Integration: Set up Google Analytics to track visitor behavior and measure lead generation effectiveness.
+
+- Brand Consistency: Ensured all design elements reinforce professionalism and discretion expected in the industry.`,
+    technologies: ["WordPress", "Elementor", "Graphic Design", "SEO", "Google Analytics"],
+    githubUrl: "",
+    liveUrl: "https://cc-pi.com",
+    image: "/images/projects/cc-pi.gif",
+    featured: true,
+    challenges: [
+      "Balancing transparency with the confidential nature of PI services",
+      "Creating a design that conveys professionalism and trustworthiness",
+      "Optimizing for local search in a competitive market"
+    ],
+    learnings: [
+      "Designing for industries that require discretion and trust",
+      "Local SEO strategies for service-based businesses",
+      "Using analytics to measure and improve lead generation"
+    ]
+  },
   // ============================================
   // La Joya Cafe - Client Work
   // ============================================
@@ -101,24 +135,42 @@ This project demonstrates my ability to handle complete client engagements from 
     ]
   },
 
-  // ============================================
-  // Markdown To HTML Converter - CLi Tool
+// ============================================
+  // Markdown To HTML Converter - Web App & CLI Tool
   // ============================================
   {
     slug: "MarkdownToHTML",
-    title: "Markdown To HTML Converter",
-    description: "A tool to convert Markdown files to HTML with customizable styling.",
-    longDescription: `<p>This project is a web-based tool that converts Markdown files into HTML with customizable styling options. It features a clean, intuitive interface and supports various formatting styles.</p>`,
-    technologies: [],
-    githubUrl: "https://github.com/Crespo1301/MarkdownToHTML", 
-    liveUrl: "",
+    title: "Markdown to HTML Converter",
+    description: "A Python-based tool with web interface for converting Markdown to beautifully styled HTML with live preview and theme support.",
+    longDescription: `A full-stack Markdown to HTML converter featuring both a CLI tool and a live web application. This project demonstrates Python backend development, serverless deployment, and frontend integration:
+
+- CLI Tool: Command-line interface supporting single file and batch conversions with customizable options for themes, table of contents, and output formatting.
+
+- Web Application: Real-time browser-based converter with live preview, file upload support, and instant HTML download functionality.
+
+- Markdown Parser: Custom-built regex-based parser supporting headers (h1-h6), bold, italic, links, images, ordered/unordered lists, code blocks with syntax highlighting, blockquotes, and horizontal rules.
+
+- Theming System: Professional light and dark themes with GitHub-flavored styling, CSS custom properties, and responsive design.
+
+- Table of Contents: Automatic TOC generation from document headers with anchor links for easy navigation.
+
+- Testing: Comprehensive test suite with 73 unit tests covering parser and converter functionality.`,
+    technologies: ["Python", "Flask", "JavaScript", "HTML", "CSS", "Vercel", "Regex", "Pytest"],
+    githubUrl: "https://github.com/Crespo1301/MarkdownToHTML",
+    liveUrl: "https://markdown-to-html-iota.vercel.app",
     image: "/images/projects/MarkdownToHTML.gif",
     featured: true,
     challenges: [
-      ""
+      "Building a robust Markdown parser using regex patterns",
+      "Deploying Python serverless functions on Vercel",
+      "Creating real-time preview without performance issues",
+      "Supporting file uploads and downloads in the browser"
     ],
     learnings: [
-      ""
+      "Python serverless function architecture for Vercel",
+      "Regex pattern design for text parsing",
+      "Building developer tools that solve real problems",
+      "Full-stack development from CLI to web deployment"
     ]
   },
 
