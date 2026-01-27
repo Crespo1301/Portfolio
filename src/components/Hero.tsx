@@ -48,7 +48,7 @@ export default function Hero() {
               View Projects
             </Link>
             <a 
-              href="/Main_Professional.pdf" 
+              href="/Carlos-Crespo-Main.pdf" 
               download 
               className="btn-secondary"
             >
