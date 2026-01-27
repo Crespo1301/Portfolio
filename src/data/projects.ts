@@ -17,38 +17,38 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-
+  
 // ============================================
   // cc-pi.com - Client Work
   // ============================================
   {
     slug: "cc-pi-com",
     title: "CC-PI.com",
-    description: "Professional website for a private investigation firm, featuring service showcases, contact forms, and SEO optimization.",
-    longDescription: `Designed and developed a professional web presence for CC-PI, a private investigation firm. This project focused on establishing credibility and generating client inquiries:
+    description: "Professional website for a commercial and residential painting company, featuring service showcases and lead generation optimization.",
+    longDescription: `Designed and developed a professional web presence for CC-PI, a commercial and residential painting company. This project focused on showcasing services and generating client inquiries:
 
-- Website Development: Built a clean, professional website using WordPress and Elementor that conveys trust and confidentiality—essential qualities for a PI firm.
+- Website Development: Built a clean, professional website using WordPress and Elementor that highlights the company's expertise in both commercial and residential painting services.
 
-- Service Presentation: Created clear, organized service pages that explain investigation offerings without revealing sensitive methodologies.
+- Service Presentation: Created organized service pages showcasing commercial solutions for retail stores, offices, warehouses, and industrial spaces, as well as residential interior and exterior painting services.
 
-- SEO Optimization: Implemented local SEO strategies to improve visibility for potential clients searching for investigation services in the area.
+- Brand Messaging: Developed clear messaging emphasizing quality craftsmanship, reliable timelines, and minimal disruption to client operations.
 
-- Analytics Integration: Set up Google Analytics to track visitor behavior and measure lead generation effectiveness.
+- SEO Optimization: Implemented local SEO strategies to improve visibility for potential clients searching for painting services in the area.
 
-- Brand Consistency: Ensured all design elements reinforce professionalism and discretion expected in the industry.`,
+- Analytics Integration: Set up Google Analytics to track visitor behavior and measure lead generation effectiveness.`,
     technologies: ["WordPress", "Elementor", "Graphic Design", "SEO", "Google Analytics"],
     githubUrl: "",
     liveUrl: "https://cc-pi.com",
     image: "/images/projects/cc-pi.gif",
     featured: true,
     challenges: [
-      "Balancing transparency with the confidential nature of PI services",
+      "Presenting both commercial and residential services without cluttering the user experience",
       "Creating a design that conveys professionalism and trustworthiness",
-      "Optimizing for local search in a competitive market"
+      "Optimizing for local search in a competitive painting services market"
     ],
     learnings: [
-      "Designing for industries that require discretion and trust",
-      "Local SEO strategies for service-based businesses",
+      "Designing for service-based businesses that serve multiple markets",
+      "Local SEO strategies for contractor and home service businesses",
       "Using analytics to measure and improve lead generation"
     ]
   },
