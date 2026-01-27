@@ -39,7 +39,7 @@ export default function ResumePage() {
 
         <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 section-light shadow-lg">
           <iframe
-            src="/Main_Professional.pdf"
+            src="/Carlos-Crespo-Main.pdf"
             className="w-full h-[800px]"
             title="Carlos Crespo Resume"
           />
