@@ -23,7 +23,7 @@ export const projects: Project[] = [
   // ============================================
   {
     slug: "cc-pi-com",
-    title: "CC-PI.com",
+    title: "cc-pi.com",
     description: "Professional website for a commercial and residential painting company, featuring service showcases and lead generation optimization.",
     longDescription: `Designed and developed a professional web presence for CC-PI, a commercial and residential painting company. This project focused on showcasing services and generating client inquiries:
 
@@ -159,6 +159,7 @@ This project demonstrates my ability to handle complete client engagements from 
     longDescription: "A sophisticated platform for evaluating and comparing multiple AI models' prediction accuracy. Features include dynamic scoring algorithms, performance visualization, and detailed analytics for model comparison.",
     technologies: ["Python", "Machine Learning", "Data Analysis", "Web Interface"],
     githubUrl: "https://github.com/Crespo1301/AI_Analyzer_Crespo",
+    liveUrl: "https://crespo1301.github.io/AI_Analyzer_Crespo/",
     image: "/images/projects/AI-Analyzer.gif",
     featured: true,
     challenges: [
