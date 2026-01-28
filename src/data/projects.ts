@@ -91,6 +91,44 @@ This project demonstrates my ability to handle complete client engagements from 
     ]
   },
   // ============================================
+  // Markdown To HTML Converter - Web App & CLI Tool
+  // ============================================
+  {
+    slug: "MarkdownToHTML",
+    title: "Markdown to HTML Converter",
+    description: "A Python-based tool with web interface for converting Markdown to beautifully styled HTML with live preview and theme support.",
+    longDescription: `A full-stack Markdown to HTML converter featuring both a CLI tool and a live web application. This project demonstrates Python backend development, serverless deployment, and frontend integration:
+
+- CLI Tool: Command-line interface supporting single file and batch conversions with customizable options for themes, table of contents, and output formatting.
+
+- Web Application: Real-time browser-based converter with live preview, file upload support, and instant HTML download functionality.
+
+- Markdown Parser: Custom-built regex-based parser supporting headers (h1-h6), bold, italic, links, images, ordered/unordered lists, code blocks with syntax highlighting, blockquotes, and horizontal rules.
+
+- Theming System: Professional light and dark themes with GitHub-flavored styling, CSS custom properties, and responsive design.
+
+- Table of Contents: Automatic TOC generation from document headers with anchor links for easy navigation.
+
+- Testing: Comprehensive test suite with 73 unit tests covering parser and converter functionality.`,
+    technologies: ["Python", "Flask", "JavaScript", "HTML", "CSS", "Vercel", "Regex", "Pytest"],
+    githubUrl: "https://github.com/Crespo1301/MarkdownToHTML",
+    liveUrl: "https://markdown-to-html-iota.vercel.app",
+    image: "/images/projects/MarkdownToHTML2.gif",
+    featured: true,
+    challenges: [
+      "Building a robust Markdown parser using regex patterns",
+      "Deploying Python serverless functions on Vercel",
+      "Creating real-time preview without performance issues",
+      "Supporting file uploads and downloads in the browser"
+    ],
+    learnings: [
+      "Python serverless function architecture for Vercel",
+      "Regex pattern design for text parsing",
+      "Building developer tools that solve real problems",
+      "Full-stack development from CLI to web deployment"
+    ]
+  },
+  // ============================================
   // Personal Projects
   // ============================================
   {
@@ -134,46 +172,6 @@ This project demonstrates my ability to handle complete client engagements from 
       "Statistical analysis for model comparison"
     ]
   },
-
-// ============================================
-  // Markdown To HTML Converter - Web App & CLI Tool
-  // ============================================
-  {
-    slug: "MarkdownToHTML",
-    title: "Markdown to HTML Converter",
-    description: "A Python-based tool with web interface for converting Markdown to beautifully styled HTML with live preview and theme support.",
-    longDescription: `A full-stack Markdown to HTML converter featuring both a CLI tool and a live web application. This project demonstrates Python backend development, serverless deployment, and frontend integration:
-
-- CLI Tool: Command-line interface supporting single file and batch conversions with customizable options for themes, table of contents, and output formatting.
-
-- Web Application: Real-time browser-based converter with live preview, file upload support, and instant HTML download functionality.
-
-- Markdown Parser: Custom-built regex-based parser supporting headers (h1-h6), bold, italic, links, images, ordered/unordered lists, code blocks with syntax highlighting, blockquotes, and horizontal rules.
-
-- Theming System: Professional light and dark themes with GitHub-flavored styling, CSS custom properties, and responsive design.
-
-- Table of Contents: Automatic TOC generation from document headers with anchor links for easy navigation.
-
-- Testing: Comprehensive test suite with 73 unit tests covering parser and converter functionality.`,
-    technologies: ["Python", "Flask", "JavaScript", "HTML", "CSS", "Vercel", "Regex", "Pytest"],
-    githubUrl: "https://github.com/Crespo1301/MarkdownToHTML",
-    liveUrl: "https://markdown-to-html-iota.vercel.app",
-    image: "/images/projects/MarkdownToHTML.gif",
-    featured: true,
-    challenges: [
-      "Building a robust Markdown parser using regex patterns",
-      "Deploying Python serverless functions on Vercel",
-      "Creating real-time preview without performance issues",
-      "Supporting file uploads and downloads in the browser"
-    ],
-    learnings: [
-      "Python serverless function architecture for Vercel",
-      "Regex pattern design for text parsing",
-      "Building developer tools that solve real problems",
-      "Full-stack development from CLI to web deployment"
-    ]
-  },
-
   // ============================================
   // Pomodoro Timer - CLi Application
   // ============================================
