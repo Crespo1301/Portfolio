@@ -45,6 +45,37 @@ export default function ResumePage() {
           />
         </div>
         
+        
+
+        <div className="text-center mb-10">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-heading">Cover Letter</h1>
+          <p className="text-xl text-muted">
+            Download my Cover Letter or view it below.
+          </p>
+        </div>
+        
+       <div className="flex justify-center gap-4 mb-12">
+          <a href="/Crespo - Cover Letter.pdf" download className="btn-primary">
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Download PDF
+          </a>
+          
+          <a
+            href="/Crespo - Cover Letter.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            Open in New Tab
+          </a>
+        </div>
+
+
         <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 section-light shadow-lg">
           <iframe
             src="/Crespo - Cover Letter.pdf"
