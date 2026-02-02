@@ -37,11 +37,19 @@ export default function ResumePage() {
           </a>
         </div>
 
-        <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 section-light shadow-lg">
+        <div className="mb-12 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 section-light shadow-lg">
           <iframe
             src="/Carlos-Crespo-Main.pdf"
             className="w-full h-[800px]"
             title="Carlos Crespo Resume"
+          />
+        </div>
+        
+        <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 section-light shadow-lg">
+          <iframe
+            src="/Crespo - Cover Letter.pdf"
+            className="w-full h-[800px]"
+            title="Carlos Crespo Cover Letter"
           />
         </div>
       </div>
